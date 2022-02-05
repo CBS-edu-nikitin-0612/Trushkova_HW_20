@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-internal delegate double MyDelegate(double argument1, double argument2);
-
+delegate double MyDelegate(double argument1, double argument2);
 
 class Program
 {
