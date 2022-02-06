@@ -8,6 +8,7 @@ class Program
     {
         Console.WriteLine("Hello, Teacher!");
 
+        //Анонимные методы для расчета суммы, разницы, произведения и деления двух чисел
         MyDelegate Add = (double a, double b) => { return a + b; };
         MyDelegate Sub = (double a, double b) => { return a - b; };
         MyDelegate Mul = (double a, double b) => { return a * b; };
@@ -19,12 +20,15 @@ class Program
 
         double a = 12;
         double b = 2;
+
         try
         {
+            //Выбор операции
             Console.WriteLine("\nВведите арифметическое действие, которое нужно выполниь:");
             string? arithmetic = Console.ReadLine();
             if (arithmetic != null)
             {
+                //Расчет значения выбранной операции и вывод на экран
                 double result = arithmetic switch
                 {
                     "+" => Add(a, b),

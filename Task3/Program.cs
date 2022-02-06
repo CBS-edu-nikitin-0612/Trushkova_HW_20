@@ -4,7 +4,8 @@ delegate int MyDelegate();
 delegate double MyDelegates(MyDelegate[] myDelegates);
 
 class Program
-{    
+{
+    //Создание рандомного целого числа
     public static int Method()
     {
         Random random = new Random();
@@ -15,6 +16,7 @@ class Program
 
     static void Main()
     {
+        //Создание массива делегатов, предназначенных для создания рандомного целого числа 
         MyDelegate[] myDelegates = new MyDelegate[]
         {
             Method,
@@ -24,6 +26,7 @@ class Program
             Method
         };
 
+        //Анонимный метод для расчета среднеарифметического значения чисел
         MyDelegates myDelegates1 = delegate (MyDelegate[] array)
         {
             double mean = 0;
@@ -35,6 +38,7 @@ class Program
             return mean;
         };
 
+        //Расчет и вывод на экран среднеарифметического значения чисел
         double result = myDelegates1(myDelegates);
         Console.WriteLine("Среднеарифметическое равно {0}", result);
     }
